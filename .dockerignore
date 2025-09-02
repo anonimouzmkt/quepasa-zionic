@@ -1,14 +1,39 @@
+# Git
 .git
-.idea
-tmp
-.env
-.vscode
 .gitignore
-.editorconfig
-.gitattributes
-.github
-.pre-commit-config.yaml
-.readthedocs.yml
-node_modules
-.n8n
-data
+
+# Documentation
+README.md
+LICENSE.md
+docs/
+extra/
+
+# Docker files
+docker/
+Dockerfile
+.dockerignore
+
+# CI/CD
+.github/
+
+# Helpers
+helpers/
+
+# Environment files
+.env
+.env.*
+env.example.txt
+
+# Build artifacts
+*.log
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
