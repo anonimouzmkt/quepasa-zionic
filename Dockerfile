@@ -6,14 +6,10 @@ RUN apk add --no-cache git gcc musl-dev
 
 WORKDIR /build
 
-# Copy go mod files first for better caching
-COPY src/go.mod src/go.sum ./
-RUN go mod download
-
-# Copy source code
+# Copy all source code (needed for go modules structure)
 COPY src/ .
 
-# Build the application
+# Build the application (go build will handle local modules)
 RUN CGO_ENABLED=1 GOOS=linux go build -a -installsuffix cgo -o service main.go
 
 # Runtime stage
