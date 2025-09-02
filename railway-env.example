@@ -1,0 +1,52 @@
+# Configurações essenciais para Railway
+WEBAPIHOST=0.0.0.0
+WEBAPIPORT=31000
+WEBSOCKETSSL=false
+
+# Chaves de segurança (Gere chaves seguras!)
+SIGNING_SECRET=sua-chave-secreta-super-segura-aqui
+MASTERKEY=sua-master-key-super-segura-aqui
+
+# Banco de dados PostgreSQL (será configurado automaticamente pelo Railway)
+DBDRIVER=postgres
+DBHOST=${{PGHOST}}
+DBPORT=${{PGPORT}}
+DBDATABASE=${{PGDATABASE}}
+DBUSER=${{PGUSER}}
+DBPASSWORD=${{PGPASSWORD}}
+DBSSLMODE=require
+
+# Configurações WhatsApp
+READUPDATE=true
+READRECEIPTS=false
+CALLS=false
+GROUPS=false
+BROADCASTS=false
+PRESENCE=unavailable
+
+# Logs
+LOGLEVEL=INFO
+WHATSMEOW_LOGLEVEL=WARN
+WHATSMEOW_DBLOGLEVEL=WARN
+HTTPLOGS=false
+
+# Cache
+CACHELENGTH=1000
+CACHEDAYS=7
+
+# Configurações gerais
+MIGRATIONS=true
+ACCOUNTSETUP=true
+TESTING=false
+DISPATCHUNHANDLED=false
+
+# Título da aplicação
+APP_TITLE=QuePasa-Railway
+
+# RabbitMQ (opcional - deixe vazio se não usar)
+RABBITMQ_QUEUE=
+RABBITMQ_CONNECTIONSTRING=
+RABBITMQ_CACHELENGTH=0
+
+# SIP Proxy (opcional - deixe vazio para desabilitar)
+SIPPROXY_HOST=

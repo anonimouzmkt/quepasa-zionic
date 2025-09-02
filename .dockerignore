@@ -1,14 +1,50 @@
+# Git
 .git
-.idea
-tmp
-.env
-.vscode
 .gitignore
-.editorconfig
-.gitattributes
-.github
-.pre-commit-config.yaml
-.readthedocs.yml
-node_modules
-.n8n
-data
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker/
+
+# Documentação
+*.md
+docs/
+RAILWAY-DEPLOY.md
+
+# Ambiente
+.env*
+!.env.example
+railway-env.example
+
+# Scripts
+*.sh
+generate-keys.sh
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build artifacts
+build/
+dist/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Node modules (se houver)
+node_modules/
+
+# Railway
+railway.json
