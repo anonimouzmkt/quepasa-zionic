@@ -3,3 +3,4 @@ dockerfile = "Dockerfile"
 
 [variables]
 NIXPACKS_BUILD_TIME_ENV_VARS = "CGO_ENABLED=1"
+GOOS = "linux"
