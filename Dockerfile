@@ -27,14 +27,10 @@ WORKDIR /app
 # Copy the binary from builder stage
 COPY --from=builder /build/service .
 
-# Copy assets if they exist
-COPY src/assets/ ./assets/ 2>/dev/null || true
-
-# Create directory for migrations
-RUN mkdir -p /app/migrations
-
-# Copy migrations if they exist
-COPY src/migrations/ ./migrations/ 2>/dev/null || true
+# Copy assets, migrations, and views
+COPY src/assets/ ./assets/
+COPY src/migrations/ ./migrations/
+COPY src/views/ ./views/
 
 # Expose port
 EXPOSE 31000
